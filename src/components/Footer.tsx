@@ -1,5 +1,7 @@
 "use client";
 
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 const Footer = () => {
   const year = new Date().getFullYear();
   return (
@@ -32,12 +34,23 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white"
+            aria-label="LinkedIn"
           >
-            LinkedIn
+            <FaLinkedin size={24} />
+          </a>
+          <a
+            href="https://github.com/jainam7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-white"
+            aria-label="GitHub"
+          >
+            <FaGithub size={24} />
           </a>
           <a
             href="mailto:jainamshah7111997@gmail.com"
             className="hover:text-white"
+            aria-label="Email"
           >
             Email
           </a>

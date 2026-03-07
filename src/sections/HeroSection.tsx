@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
+import { IoChevronDown } from "react-icons/io5";
 
 const HeroSection = () => {
   return (
@@ -54,32 +57,23 @@ const HeroSection = () => {
             aria-label="LinkedIn"
             className="hover:text-indigo-400"
           >
-            {/* LinkedIn SVG */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5V24H0V8zm7.5 0h4.78v2.21h.07c.66-1.25 2.27-2.21 4.68-2.21 5 0 5.92 3.28 5.92 7.54V24H18V15.5c0-2.05-.04-4.68-2.85-4.68-2.85 0-3.29 2.23-3.29 4.54V24H7.5V8z" />
-            </svg>
+            <FaLinkedin size={24} />
+          </a>
+          <a
+            href="https://github.com/jainam7/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hover:text-indigo-400"
+          >
+            <FaGithub size={24} />
           </a>
           <a
             href="mailto:jainamshah7111997@gmail.com"
             aria-label="Email"
             className="hover:text-indigo-400"
           >
-            {/* Email SVG */}
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 13.065L.388 4h23.224L12 13.065zm0 2.87L24 6.5v12H0v-12l12 9.435z" />
-            </svg>
+            <MdEmail size={24} />
           </a>
         </div>
         <motion.div
@@ -92,19 +86,7 @@ const HeroSection = () => {
             className="flex flex-col items-center gap-2 text-indigo-400 hover:text-indigo-300 transition"
           >
             <span className="text-sm font-medium">Scroll to explore</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
+            <IoChevronDown size={24} />
           </a>
         </motion.div>
       </motion.div>
