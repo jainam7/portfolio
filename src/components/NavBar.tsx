@@ -73,7 +73,7 @@ const NavBar = () => {
         </button>
         <ul
           className={`md:flex md:space-x-6 md:items-center absolute md:static bg-gray-900/90 w-full md:w-auto left-0 md:left-auto top-16 md:top-auto transition-all duration-300 ease-in-out overflow-hidden ${
-            open ? "max-h-60" : "max-h-0"
+            open ? "max-h-96" : "max-h-0"
           }`}
         >
           {items.map((item) => (
