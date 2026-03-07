@@ -5,12 +5,26 @@ export const getViewportConfig = (section?: "skills" | "projects") => {
 
   const isMobile = window.innerWidth < 768; // md breakpoint
 
-  // Disable animations for Skills and Projects on mobile
   if (isMobile && (section === "skills" || section === "projects")) {
-    return { once: true, amount: "all" as const };
+    return { once: true };
   }
 
   return isMobile
     ? { once: true }
     : { amount: "some" as const, margin: "-100px" };
+};
+
+export const getTransitionConfig = (section?: "skills" | "projects") => {
+  if (typeof window === "undefined") {
+    return undefined;
+  }
+
+  const isMobile = window.innerWidth < 768;
+
+  // Disable animation duration on mobile for skills and projects
+  if (isMobile && (section === "skills" || section === "projects")) {
+    return { duration: 0 };
+  }
+
+  return undefined;
 };

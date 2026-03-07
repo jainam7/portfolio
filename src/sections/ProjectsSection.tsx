@@ -1,7 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { getViewportConfig } from "../utils/animationConfig";
+import {
+  getViewportConfig,
+  getTransitionConfig,
+} from "../utils/animationConfig";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
@@ -25,6 +28,7 @@ const projects = [
 
 const ProjectsSection = () => {
   const viewportConfig = getViewportConfig("projects");
+  const transitionConfig = getTransitionConfig("projects");
   return (
     <section id="projects" className="py-20 bg-gray-900 text-gray-100">
       <div className="max-w-5xl mx-auto px-4">
@@ -32,7 +36,7 @@ const ProjectsSection = () => {
           className="text-3xl font-bold mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
+          transition={transitionConfig || { duration: 0.6 }}
           viewport={viewportConfig}
         >
           Projects
@@ -44,7 +48,9 @@ const ProjectsSection = () => {
               className="bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-indigo-500 transition duration-300 shadow-lg hover:shadow-indigo-500/20"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: idx * 0.2 }}
+              transition={
+                transitionConfig || { duration: 0.6, delay: idx * 0.2 }
+              }
               viewport={viewportConfig}
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
