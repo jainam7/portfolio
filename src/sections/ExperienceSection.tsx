@@ -8,7 +8,6 @@ const experiences = [
     company: "Bankai Infotech",
     location: "Ahmedabad, India",
     period: "09/2024 - Present",
-    contact: "Tushar Patel",
     responsibilities: [
       "Engineered a workflow-driven API builder using Next.js and Camunda BPMN.js, enabling users to create and execute APIs via custom diagram components.",
       "Implemented modules for end-to-end user onboarding, application setup, role assignment, and organization creation to streamline platform operations.",
@@ -23,7 +22,6 @@ const experiences = [
     company: "Beehively",
     location: "Ahmedabad, India",
     period: "12/2021 - 09/2024",
-    contact: "Niket Patel",
     responsibilities: [
       "Revamped attendance and report systems using React.js, GraphQL, and Next.js to enhance accuracy and usability.",
       "Led the development of an urgent alert feature, improving communication efficiency.",
@@ -34,7 +32,6 @@ const experiences = [
     company: "Treebo Hotels",
     location: "Bengaluru, India",
     period: "01/2020 - 12/2021",
-    contact: "Mrs. Dhanya Rai",
     responsibilities: [
       "Developed a responsive booking flow with auto-filled details and guest search, and designed an interactive dashboard, enhancing efficiency and engagement.",
     ],
@@ -67,10 +64,7 @@ const ExperienceSection = () => {
               <p className="text-sm text-gray-400">
                 {exp.company} - {exp.location}
               </p>
-              <p className="text-sm text-gray-400 mb-2">{exp.period}</p>
-              <p className="text-sm text-gray-500 mb-2">
-                Contact: {exp.contact}
-              </p>
+              <p className="text-sm text-gray-400 mb-4">{exp.period}</p>
               <ul className="list-disc list-inside space-y-1">
                 {exp.responsibilities.map((r, ri) => (
                   <li key={ri}>{r}</li>
