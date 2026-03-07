@@ -50,7 +50,7 @@ const skills = [
 ];
 
 const SkillsSection = () => {
-  const viewportConfig = getViewportConfig();
+  const viewportConfig = getViewportConfig("skills");
   return (
     <section id="skills" className="py-20 bg-gray-900 text-gray-200">
       <div className="max-w-5xl mx-auto px-4">

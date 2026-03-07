@@ -24,7 +24,7 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
-  const viewportConfig = getViewportConfig();
+  const viewportConfig = getViewportConfig("projects");
   return (
     <section id="projects" className="py-20 bg-gray-900 text-gray-100">
       <div className="max-w-5xl mx-auto px-4">
