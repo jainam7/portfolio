@@ -47,7 +47,7 @@ const ExperienceSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ amount: "some", margin: "-100px" }}
         >
           Experience
         </motion.h2>
@@ -59,7 +59,7 @@ const ExperienceSection = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              viewport={{ once: true }}
+              viewport={{ amount: "some", margin: "-100px" }}
             >
               <span className="absolute -left-5 top-1 bg-indigo-600 w-3 h-3 rounded-full" />
               <h3 className="text-xl font-semibold">{exp.role}</h3>

@@ -13,7 +13,7 @@ const ContactSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ amount: "some", margin: "-100px" }}
         >
           Contact
         </motion.h2>
@@ -22,7 +22,7 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ amount: "some", margin: "-100px" }}
         >
           <div className="flex items-center space-x-4 bg-gray-900 p-6 rounded-lg min-h-[120px]">
             <div className="text-indigo-400">
