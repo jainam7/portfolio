@@ -1,10 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getViewportConfig } from "../utils/animationConfig";
 import { FaPhoneAlt, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const ContactSection = () => {
+  const viewportConfig = getViewportConfig();
   return (
     <section id="contact" className="py-20 bg-gray-800 text-gray-100">
       <div className="max-w-5xl mx-auto px-3">
@@ -13,7 +15,7 @@ const ContactSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ amount: "some", margin: "-100px" }}
+          viewport={viewportConfig}
         >
           Contact
         </motion.h2>
@@ -22,7 +24,7 @@ const ContactSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ amount: "some", margin: "-100px" }}
+          viewport={viewportConfig}
         >
           <div className="flex items-center space-x-4 bg-gray-900 p-6 rounded-lg min-h-[120px]">
             <div className="text-indigo-400">

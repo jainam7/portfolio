@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getViewportConfig } from "../utils/animationConfig";
 import {
   FaReact,
   FaJava,
@@ -49,6 +50,7 @@ const skills = [
 ];
 
 const SkillsSection = () => {
+  const viewportConfig = getViewportConfig();
   return (
     <section id="skills" className="py-20 bg-gray-900 text-gray-200">
       <div className="max-w-5xl mx-auto px-4">
@@ -57,6 +59,7 @@ const SkillsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
+          viewport={viewportConfig}
         >
           Skills
         </motion.h2>
@@ -67,7 +70,7 @@ const SkillsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              viewport={{ amount: "some", margin: "-100px" }}
+              viewport={viewportConfig}
               className="bg-gradient-to-br from-indigo-950 via-gray-800 to-gray-900 p-7 rounded-xl border border-gray-700 hover:border-indigo-500 transition duration-300 shadow-lg hover:shadow-indigo-500/20"
             >
               <h3 className="text-lg font-semibold mb-6 text-indigo-300">
@@ -82,7 +85,7 @@ const SkillsSection = () => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.4, delay: idx * 0.1 }}
-                      viewport={{ amount: "some", margin: "-100px" }}
+                      viewport={viewportConfig}
                       whileHover={{ scale: 1.15, y: -8 }}
                       className="flex flex-col items-center gap-2 p-4 rounded-lg bg-gradient-to-br from-gray-700 to-gray-800 hover:from-indigo-600 hover:to-indigo-700 transition duration-300 cursor-pointer group shadow-md hover:shadow-indigo-500/40"
                     >

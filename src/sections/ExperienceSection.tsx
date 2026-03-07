@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getViewportConfig } from "../utils/animationConfig";
 
 const experiences = [
   {
@@ -39,6 +40,7 @@ const experiences = [
 ];
 
 const ExperienceSection = () => {
+  const viewportConfig = getViewportConfig();
   return (
     <section id="experience" className="py-20 bg-gray-900 text-gray-100">
       <div className="max-w-5xl mx-auto px-4">
@@ -47,7 +49,7 @@ const ExperienceSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ amount: "some", margin: "-100px" }}
+          viewport={viewportConfig}
         >
           Experience
         </motion.h2>
@@ -59,7 +61,7 @@ const ExperienceSection = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              viewport={{ amount: "some", margin: "-100px" }}
+              viewport={viewportConfig}
             >
               <span className="absolute -left-5 top-1 bg-indigo-600 w-3 h-3 rounded-full" />
               <h3 className="text-xl font-semibold">{exp.role}</h3>

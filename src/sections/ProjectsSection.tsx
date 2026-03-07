@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getViewportConfig } from "../utils/animationConfig";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
@@ -23,6 +24,7 @@ const projects = [
 ];
 
 const ProjectsSection = () => {
+  const viewportConfig = getViewportConfig();
   return (
     <section id="projects" className="py-20 bg-gray-900 text-gray-100">
       <div className="max-w-5xl mx-auto px-4">
@@ -31,7 +33,7 @@ const ProjectsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ amount: "some", margin: "-100px" }}
+          viewport={viewportConfig}
         >
           Projects
         </motion.h2>
@@ -43,7 +45,7 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
-              viewport={{ amount: "some", margin: "-100px" }}
+              viewport={viewportConfig}
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>

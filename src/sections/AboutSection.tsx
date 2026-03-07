@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getViewportConfig } from "../utils/animationConfig";
 
 const AboutSection = () => {
+  const viewportConfig = getViewportConfig();
   return (
     <section id="about" className="py-20 bg-gray-800 text-gray-100">
       <div className="max-w-5xl mx-auto px-4">
@@ -11,7 +13,7 @@ const AboutSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          viewport={{ amount: "some", margin: "-100px" }}
+          viewport={viewportConfig}
         >
           About Me
         </motion.h2>
@@ -20,7 +22,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ amount: "some", margin: "-100px" }}
+          viewport={viewportConfig}
         >
           I am a frontend developer with experience building complex UI
           applications. My expertise includes React, Next.js, JavaScript, and
@@ -33,7 +35,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ amount: "some", margin: "-100px" }}
+          viewport={viewportConfig}
         >
           Outside of work, I enjoy travelling, playing cricket, and listening to
           music.
