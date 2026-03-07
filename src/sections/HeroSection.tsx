@@ -30,10 +30,10 @@ const HeroSection = () => {
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
           <a
-            href="#experience"
+            href="#projects"
             className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-md transition"
           >
-            View Experience
+            View Projects
           </a>
           <a
             href="/Jainam_shah_Resume.pdf"
