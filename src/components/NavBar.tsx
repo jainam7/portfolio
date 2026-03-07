@@ -6,19 +6,6 @@ import { useState, useEffect } from "react";
 const NavBar = () => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState("home");
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "light" || saved === "dark") {
-      setTheme(saved as "light" | "dark");
-    }
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    localStorage.setItem("theme", theme);
-  }, [theme]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,15 +77,6 @@ const NavBar = () => {
               </a>
             </li>
           ))}
-          <li className="px-4 py-2 md:p-0">
-            <button
-              onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}
-              className="text-white hover:text-indigo-400 focus:outline-none"
-              aria-label="Toggle theme"
-            >
-              {theme === "dark" ? "🌞" : "🌙"}
-            </button>
-          </li>
         </ul>
       </div>
     </nav>
