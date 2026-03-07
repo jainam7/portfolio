@@ -11,6 +11,7 @@ const AboutSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           About Me
         </motion.h2>
@@ -19,6 +20,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
         >
           I am a frontend developer with experience building complex UI
           applications. My expertise includes React, Next.js, JavaScript, and
@@ -31,6 +33,7 @@ const AboutSection = () => {
           initial={{ opacity: 0, x: -20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
         >
           Outside of work, I enjoy travelling, playing cricket, and listening to
           music.

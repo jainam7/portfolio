@@ -31,6 +31,7 @@ const ProjectsSection = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
           Projects
         </motion.h2>
@@ -42,6 +43,7 @@ const ProjectsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: idx * 0.2 }}
+              viewport={{ once: true }}
             >
               <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                 <div>
