@@ -5,9 +5,9 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-gray-800 text-gray-100">
-      <div className="max-w-4xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <motion.h2
-          className="text-3xl font-bold mb-4"
+          className="text-3xl font-bold mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}

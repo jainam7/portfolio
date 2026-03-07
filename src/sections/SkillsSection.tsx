@@ -51,9 +51,9 @@ const skills = [
 const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 bg-gray-900 text-gray-200">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <motion.h2
-          className="text-4xl font-bold mb-12"
+          className="text-3xl font-bold mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6 }}

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-gray-800 text-gray-100">
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           className="text-3xl font-bold mb-8"
           initial={{ opacity: 0 }}
