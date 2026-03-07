@@ -17,7 +17,6 @@ import {
 } from "react-icons/si";
 import { TbApi } from "react-icons/tb";
 import { BiLogoJavascript } from "react-icons/bi";
-import { IoLogoHtml5, IoLogoCss3 } from "react-icons/io";
 import { OpenAI, Claude } from "@lobehub/icons";
 
 const skills = [
@@ -28,8 +27,6 @@ const skills = [
       { name: "Next.js", Icon: SiNextdotjs },
       { name: "JavaScript", Icon: BiLogoJavascript },
       { name: "TypeScript", Icon: SiTypescript },
-      { name: "HTML 5", Icon: IoLogoHtml5 },
-      { name: "CSS 3", Icon: IoLogoCss3 },
       { name: "Tailwind CSS", Icon: SiTailwindcss },
       { name: "React Native", Icon: FaMobileAlt },
     ],
@@ -38,27 +35,10 @@ const skills = [
     category: "Libraries & Tools",
     items: [
       { name: "GraphQL", Icon: SiGraphql },
-      { name: "Bootstrap", Icon: FaBootstrap },
       { name: "GitHub", Icon: FaGithub },
-    ],
-  },
-  {
-    category: "AI & Code Quality",
-    items: [
-      {
-        name: "ChatGPT",
-        Icon: OpenAI,
-      },
-      {
-        name: "Claude",
-        Icon: Claude,
-      },
-    ],
-  },
-  {
-    category: "Other",
-    items: [
       { name: "REST APIs", Icon: TbApi },
+      { name: "ChatGPT", Icon: OpenAI },
+      { name: "Claude", Icon: Claude },
       { name: "Camunda", Icon: SiCamunda },
       {
         name: "BPMN.js",
@@ -80,7 +60,7 @@ const SkillsSection = () => {
         >
           Skills
         </motion.h2>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-8">
           {skills.map((group) => (
             <motion.div
               key={group.category}
